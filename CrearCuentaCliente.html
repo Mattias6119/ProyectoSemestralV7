@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0f9ac1d95b.js" crossorigin="anonymous"></script>
+    <title>Login usuario</title>
+    <link rel="stylesheet" href="CrearCuentaCliente.css">
+    <script>
+        function Crear(){
+            var nom=document.getElementById("nombre").value;
+            var ape=document.getElementById("apellido").value;
+
+            if(nom==""||ape==""){
+               alert("Ingrese datos en el nombre o apellido por favor")
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="Titulo">
+            <h1 class="logo">Jardineria MCN</h1>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                &#8801
+            </label>
+        </div>
+        <nav class="menu">
+            <a href="#">Carrito</a>
+            <a href="#">Seguimiento</a>
+            <label for="check" class="esconder-menu">
+                &#215
+            </label>
+        </nav>
+        <section id="iconos">
+            <div id="contenido-icono">
+                <div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="login-box">
+        <img class="avatar" src="Img/Logos/LogoPlantaa.png" alt="Logo de la Jardineria">
+        <h1>Crea tu cuenta aqui</h1>
+        <form>
+            <!--Nombre usuario-->
+            <label for="NombreUsuario">Nombre</label>
+            <input type="text" placeholder="Nombre" id="nombre">
+
+            <!--Apellido-->
+            <label for="apellido">Apellido</label>
+            <input type="text" placeholder="Apellido" id="apellido">
+
+            <!--Correo usuario-->
+            <label for="correo">Correo Electronico</label>
+            <input type="text" placeholder="Correo" id="correo">
+
+            <!--Contraseña-->
+            <label for="Contraseña">Contraseña</label>
+            <input type="password" placeholder="Contraseña" id="contraseña">
+
+            <input onclick="Crear()" type="submit" value="Crear cuenta" id="BtnCrear">
+            <a href="InicioSesionClienteV2.html">Volver a inicar sesion</a><br>
+            <a href="index.html">Volver al menu</a>
+        </form>
+    </div>
+</body>
+</html>

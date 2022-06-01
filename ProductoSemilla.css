@@ -1,0 +1,279 @@
+/*RESET*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*HEADER MENU*/
+
+header {
+    height: 100px;
+    background: #4d4d5C;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    text-transform: uppercase;
+    color: #6cc091;
+    font-weight: 200;
+}
+
+.menu a{ 
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order:1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #6cc091;
+}
+
+#check{
+    display: none;
+}
+
+/* BANNER */
+#banner{
+    padding: 0 50px;
+    background-image: url(Img/Semillas/img_planta1.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content: '';
+    background: rgba(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{ 
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #6cc091;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+
+.boton-empezar:hover{
+    background: #6cc09070;
+}
+
+form input,
+form textarea{
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #8dcca9;
+    padding: 10px 5px;
+    outline: 0;
+    width: 100%;
+}
+
+form input:focus,
+form textarea.focus{
+    border-color: #4bae77;
+    box-shadow: 0 0 0 1px #4bae77;
+}
+
+
+/*PLANTAS*/
+
+#Semillas{
+    padding: 50ox 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#Semillas img{
+    border-radius: 100%;
+}
+
+#Semillas div{
+    padding: 30px 30px;
+}
+
+#Semillas div h4{
+    color: #4D4D5C;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#Semillas div p{
+    color: #4d4d5c87;
+    font-size: 18px;
+    margin: 50px;   
+}
+
+#Semillas .ImgSemillas1{
+    width: 200px;
+    height: 200px;
+}
+
+#Semillas .ImgSemillas2{
+    width: 200px;
+    height: 200px;
+}
+#Semillas .ImgSemillas3{
+    width: 200px;
+    height: 200px;
+}
+
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #6cc091;
+    padding: 10px 30px;
+    border: 3px solid #6cc091;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover{
+    background: #6cc091;
+    color: #fff;
+}
+
+/*FINAL PAG*/
+main2{
+    height: 100px;
+    background: #4d4d5C;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fin input{
+    position: absolute;
+    width: 400px;
+    top: 200px;
+    transform: translate(230%, 1320%);
+    min-width: 250px;
+}
+
+.fin input[type="text"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.boton-sub{ 
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #6cc091;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+    position: absolute;
+    top: 200px;
+    transform: translate(1020%, 1320%);
+}
+
+.boton-sub{
+    background: #6cc09070;
+}
+
+/* ICONOS */
+.contenido-icono{
+    font-size: 30x;
+    padding: 0 10px;
+    display: flex;
+    width: 50px;
+    height: 10px;
+}
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /* PLANTAS */
+    #plantas{
+        flex-direction: column;
+    }
+
+    /*FIN PAG*/
+
+}
